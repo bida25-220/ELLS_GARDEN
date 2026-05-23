@@ -15,9 +15,11 @@
   <div class="left-group">
     
     <div class="search-box">
-      <input type="text" placeholder="Search...">
+      <input type="text" id="searchInput" placeholder="Search..."
+       onkeyup="searchPages()">
       <span class="search-icon">⌕</span>
     </div>
+    <ul id="results"></ul>
 
     <div class="lang-box">
       <img src="imagesl/earth-americas-solid.png" width="28px">
@@ -171,7 +173,6 @@ window.onload = function(){
   setLanguage(savedLang);
 }
 </script>
-
 </body>
 </html>
 

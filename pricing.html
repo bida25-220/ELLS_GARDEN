@@ -17,139 +17,178 @@
   <div class="left-group">
     <div class="search-box">
       <input type="text" placeholder="Search...">
-      🔍
+      <span class="search-icon">⌕</span>
     </div>
 
-    <div class="lang-select">
-      🌍
+    <div class="lang-box">
+      <img src="imagesl/earth-americas-solid.png" width="28px">
       <select onchange="setLanguage(this.value)">
         <option value="en">EN</option>
         <option value="tn">TN</option>
       </select>
     </div>
+    
   </div>
 
-  <img class="logo-img" src="images/logom.png" alt="logo" width="200px" height="100px">
+  <img src="images4/logomf.png" width="100px" height="100px" alt="My Logo" class="top-right-logomf">
 
 </div>
 
 <!-- Menu -->
 <nav>
-  <a href="index.html" id="home">Homepage</a>
-  <a href="gallery.html" id="gallery">Gallery</a>
-  <a href="about us.html" id="about">About Us</a>
-  <a href="events.html" id="events">Events</a>
-  <a href="services.html">Pricing</a>
-  <a href="location.html" id="location">Location</a>
-  <a href="contact us.html" id="contact">Contact Us</a>
+  <ul class="nav-links"> 
+    <li><a href="index.html" id="home">Homepage</a></li>
+    <li><a href="about us.html" id="about">About Us</a></li>
+    <li><a href="gallery.html" id="gallery">Gallery</a></li>
+    <li><a href="events.html" id="events">Events</a></li>
+    <li><a href="pricing.html" id="pricing">Pricing</a></li>
+    <li><a href="location.html" id="location">Location</a></li>
+    <li><a href="contact us.html" id="contact">Contact Us</a></li>
+    <li><a href="feedback.html" id="feedback">Feedback</a></li>
+  </ul>
 </nav>
 
 <!-- Content -->
 <section id="pricing-section">
-  <div class="container">
-    <div class="text-center mb-4">
-      <h2 class="fw-bold">Pricing & Packages</h2>
-      <p class="text-muted">Choose an option that works for you.</p>
+    <div class="container">
+        <div class="text-center mb-4">
+            <h2>Pricing & Packages</h2>
+            <p class="text-muted">Choose an option that works for you.</p>
+        </div>
+        
+        <table>
+            <tr>
+                <th>Event</th>
+                <th>People</th>
+                <th>Price (Pula)</th>
+            </tr>
+            <tr>
+                <td>Wedding</td>
+                <td>—</td>
+                <td>9500</td>
+            </tr>
+            <tr>
+                <td>Photoshoot</td>
+                <td>—</td>
+                <td>800</td>
+            </tr>
+            <tr>
+                <td>Gathering</td>
+                <td>15-30</td>
+                <td>1500</td>
+            </tr>
+            <tr>
+                <td>Gathering</td>
+                <td>31-50</td>
+                <td>3000</td>
+            </tr>
+            <tr>
+                <td>Gathering</td>
+                <td>50-100</td>
+                <td>5000</td>
+            </tr>
+            <tr>
+                <td>Individual</td>
+                <td>1</td>
+                <td>50</td>
+            </tr>
+        </table>
     </div>
-
-    <table border="1" width="100%" cellpadding="10">
-      <tr>
-        <th>Event</th>
-        <th>People</th>
-        <th>Price(Pula)</th>
-  
-      </tr>
-
-      <tr>
-        <td>Wedding</td>
-        <td>_</td>
-        <td>9500</td>
-        
-      </tr>
-
-      <tr>
-        <td>Photoshoot</td>
-        <td>_</td>
-        <td>800</td>
-        
-      </tr>
-
-      <tr>
-        <td>Gathering</td>
-        <td>15-30</td>
-        <td>1500</td>
-        
-      </tr>
-
-      <tr>
-        <td>Gathering</td>
-        <td>31-50</td>
-        <td>3000</td>
-      </tr>
-
-      <tr>
-        <td>Gathering</td>
-        <td>50-100</td>
-        <td>5000</td>
-      </tr>
-
-      <tr>
-        <td>Individual</td>
-        <td>1</td>
-        <td>50</td>
-        
-      </tr>
-
-
-    </table>
-  </div>
 </section>
 
 <footer>
-  <div><a href="contact us.html">Contact us</a></div>
-  <div>Follow us:<i class="fa-brands fa-tiktok"></i>    <i class="fa-brands fa-facebook"></i>   <i class="fa-brands fa-whatsapp"></i> </div>
-  <div>b2nkwe@yahoo.com</div>
+    <div>
+      <h4>Quick Links</h4>
+      <a href="contact us.html">Contact us</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="location.html">Location</a>
+      <a href="events.html">Events</a>
+    </div>
+    <div>
+      <h4>Follow us:</h4>
+      <p><a class="social-label" href="https://www.tiktok.com/@ells.garden2?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" onclick="window.open(this.href, '_blank'); return false;" title="Tiktok"><i class="fa-brands fa-tiktok"></i> Tiktok</a></p>
+      <p><a class="social-label" href="https://www.instagram.com/ellsgarden2?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" onclick="window.open(this.href, '_blank'); return false;" title="Instagram"><i class="fa-brands fa-instagram"></i> Instagram</a></p>
+      <p><a class="social-label" href="https://www.facebook.com/share/18urRrZPME/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" onclick="window.open(this.href, '_blank'); return false;" title="Facebook"><i class="fa-brands fa-facebook"></i> Facebook</a></p>
+    </div>
+    <div>
+      <h4>Contact Information</h4>
+      <p>Email: b2nkwe@yahoo.com</p>
+      <p>Phone: +267 7333 3174</p>
+      <p>Address: Boatle, Botswana</p>
+    </div>
 </footer>
 <div class="copyright">© 2026 Ells Garden. All rights reserved.</div>
 
 <script>
+let index = 0;
+
+function visibleSlides(){
+  if(window.innerWidth <= 600) return 1;
+  if(window.innerWidth <= 900) return 2;
+  return 4;
+}
+
+function moveSlide(step){
+  const track = document.getElementById("track");
+  const slides = document.querySelectorAll(".slide");
+  const total = slides.length;
+
+  index += step;
+
+  if(index < 0) index = total - visibleSlides();
+  if(index > total - visibleSlides()) index = 0;
+
+  const slideWidth = slides[0].offsetWidth + 25;
+  track.style.transform = `translateX(-${index * slideWidth}px)`;
+}
+
+setInterval(()=>moveSlide(1),3000);
+</script>
+
+<script>
 const translations = {
   en:{
-    home:"Homepage",
-    gallery:"Gallery",
-    about:"About Us",
-    events:"Events",
-    location:"Location",
-    contact:"Contact Us",
-    footer1:"Contact us"
+    home:"HOME",
+    gallery:"GALLERY",
+    about:"ABOUT US",
+    events:"EVENTS",
+    pricing:"PRICING",
+    location:"LOCATION",
+    contact:"CONTACT US",
+    feedback:"FEEDBACK"
   },
-
   tn:{
     home:"Gae",
     gallery:"Ditshwantsho",
     about:"Ka Rona",
     events:"Ditiragalo",
+    pricing:"Ditlhwatlhwa",
     location:"Lefelo",
     contact:"Ikgolaganye",
-    footer1:"Ikgolaganye"
+    feedback:"Maikutlo"
   }
 };
 
 function setLanguage(lang){
-  document.getElementById("home").innerText = translations[lang].home;
-  document.getElementById("gallery").innerText = translations[lang].gallery;
-  document.getElementById("about").innerText = translations[lang].about;
-  document.getElementById("events").innerText = translations[lang].events;
-  document.getElementById("location").innerText = translations[lang].location;
-  document.getElementById("contact").innerText = translations[lang].contact;
-  document.getElementById("footer1").innerText = translations[lang].footer1;
+  const navLinks = document.querySelectorAll('nav a');
+  navLinks.forEach(link => {
+    const id = link.id;
+    if (translations[lang][id]) {
+      link.textContent = translations[lang][id];
+    }
+  });
+  localStorage.setItem("language", lang);
 }
 
 window.onload = function(){
-  setLanguage("en");
+  const savedLang = localStorage.getItem("language") || "en";
+  setLanguage(savedLang);
 }
 </script>
 
 </body>
 </html>
-  
+
+
+
+
