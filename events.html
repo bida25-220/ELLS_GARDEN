@@ -6,199 +6,164 @@
 <title>Events - Ells Garden</title>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 </head>
 <body class="page-events">
-
 <div class="page">
-<div class="top-bar">
-  <div class="left-group">
-    <div class="search-box">
-      <input type="text" placeholder="Search...">
-      <span class="search-icon">⌕</span>
+
+    <div class="top-bar">
+        <div class="left-group">
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <span class="search-icon">⌕</span>
+            </div>
+            <div class="lang-box">
+                <img src="imagesl/earth-americas-solid.png" width="28px">
+                <select onchange="setLanguage(this.value)">
+                    <option value="en">EN</option>
+                    <option value="tn">TN</option>
+                </select>
+            </div>
+        </div>
+        <img src="images4/logomf.png" width="100px" height="100px" alt="My Logo" class="top-right-logomf">
     </div>
-    <div class="lang-box">
-      🌍
-      <select onchange="setLanguage(this.value)">
-        <option value="en">EN</option>
-        <option value="tn">TN</option>
-      </select>
+
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html" id="home">Homepage</a></li>
+            <li><a href="about us.html" id="about">About Us</a></li>
+            <li><a href="gallery.html" id="gallery">Gallery</a></li>
+            <li><a href="events.html" id="events">Events</a></li>
+            <li><a href="pricing.html" id="pricing">Pricing</a></li>
+            <li><a href="location.html" id="location">Location</a></li>
+            <li><a href="contact us.html" id="contact">Contact Us</a></li>
+            <li><a href="feedback.html" id="feedback">Feedback</a></li>
+        </ul>
+    </nav>
+
+    <!-- FIXED CARD CONTAINER -->
+    <div class="card-container">
+        <div class="card">
+            <img src="images3/wed.JPG" alt="Wedding">
+            <div class="card-content">
+                <h2>Wedding</h2>
+                <p>Plan your dream wedding in our beautiful garden setting with stunning views and elegant arrangements.</p>
+            </div>
+            <a href="pricing.html" class="event-link">View Pricing</a>
+        </div>
+
+        <div class="card">
+            <img src="images4/kidparty3.JPG" alt="Party">
+            <div class="card-content">
+                <h2>Party</h2>
+                <p>Plan your child's birthday party in our fun and engaging garden setting.</p>
+            </div>
+            <a href="pricing.html" class="event-link">View Pricing</a>
+        </div>
+
+        <div class="card">
+            <img src="imagesg/IMG_0848.JPG" alt="Swimming">
+            <div class="card-content">
+                <h2>Swimming</h2>
+                <p>Enjoy a refreshing swim in our beautiful garden pool.</p>
+            </div>
+            <a href="pricing.html" class="event-link">View Pricing</a>
+        </div>
+
+        <div class="card">
+            <img src="imagesg/photoshootg.jpg" alt="Photoshoot">
+            <div class="card-content">
+                <h2>Photoshoot</h2>
+                <p>Capture your dream photoshoot in our beautiful garden setting.</p>
+            </div>
+            <a href="pricing.html" class="event-link">View Pricing</a>
+        </div>
     </div>
-  </div>
-  <img class="logo-img" src="images/logom.png" alt="logo" width="200px" height="100px">
-</div>
 
-<nav>
-  <a href="index.html" id="home">Homepage</a>
-  <a href="gallery.html" id="gallery">Gallery</a>
-  <a href="about us.html" id="about">About Us</a>
-  <a href="events.html" id="events">Events</a>
-  <a href="pricing.html" id="pricing">Pricing</a>
-  <a href="location.html" id="location">Location</a>
-  <a href="contact us.html" id="contact">Contact Us</a>
-</nav>
-
-<section class="events">
-  <div class="event-grid">
-    <article class="event-card">
-      <div class="event-header">
-        <h2>Wedding</h2>
-        <p>Plan your dream wedding in our beautiful garden setting with stunning views and elegant arrangements.</p>
-      </div>
-      <div class="carousel">
-        <button class="carousel-button prev" aria-label="Previous slide">❮</button>
-        <div class="carousel-track">
-          <img class="carousel-slide" src="images/wed.JPG" alt="Wedding photo 1">
-          <img class="carousel-slide" src="images/weddinj.JPG" alt="Wedding photo 2">
-          <img class="carousel-slide" src="images/weding.JPG" alt="Wedding photo 3">
+    <footer>
+        <div>
+            <h4>Quick Links</h4>
+            <a href="contact us.html">Contact us</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="location.html">Location</a>
+            <a href="events.html">Events</a>
         </div>
-        <button class="carousel-button next" aria-label="Next slide">❯</button>
-      </div>
-      <div class="event-details">
-        <p>Includes: Ceremony setup, floral arrangements, sound system, and basic catering for up to 100 guests.</p>
-        <a href="pricing.html" class="event-link">View Pricing</a>
-      </div>
-    </article>
-
-    <article class="event-card">
-      <div class="event-header">
-        <h2>Parties</h2>
-        <p>Celebrate birthdays with themed decorations, cake cutting, and fun activities in the garden.</p>
-      </div>
-      <div class="carousel">
-        <button class="carousel-button prev" aria-label="Previous slide">❮</button>
-        <div class="carousel-track">
-          <img class="carousel-slide" src="images/kidparty.JPG" alt="Birthday event photo 1">
-          <img class="carousel-slide" src="images/kidparty2.JPG" alt="Birthday event photo 2">
-          <img class="carousel-slide" src="images/kidparty3.JPG" alt="Birthday event photo 3">
+        <div>
+            <h4>Follow us:</h4>
+            <p><a class="social-label" href="https://www.tiktok.com/@ells.garden2?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok"></i> Tiktok</a></p>
+            <p><a class="social-label" href="https://www.instagram.com/ellsgarden2?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> Instagram</a></p>
+            <p><a class="social-label" href="https://www.facebook.com/share/18urRrZPME/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i> Facebook</a></p>
         </div>
-        <button class="carousel-button next" aria-label="Next slide">❯</button>
-      </div>
-      <div class="event-details">
-        <p>Includes: Themed decorations, cake setup, music system, and seating for up to 50 guests.</p>
-        <a href="pricing.html" class="event-link">View Pricing</a>
-      </div>
-    </article>
-
-    <article class="event-card">
-      <div class="event-header">
-        <h2>Photoshoots</h2>
-        <p>Capture your moments in our beautiful garden settings.</p>
-      </div>
-      <div class="carousel">
-        <button class="carousel-button prev" aria-label="Previous slide">❮</button>
-        <div class="carousel-track">
-          <img class="carousel-slide" src="images/IMG_5540.JPG" alt="Corporate event photo 2">
-          <img class="carousel-slide" src="images/IMG_5514.JPG" alt="Corporate event photo 3">
-          <img class="carousel-slide" src="images/overview.jpg" alt="Corporate photo 4">
+        <div>
+            <h4>Contact Information</h4>
+            <p>Email: b2nkwe@yahoo.com</p>
+            <p>Phone: +267 7333 3174</p>
+            <p>Address: Boatle, Botswana</p>
         </div>
-        <button class="carousel-button next" aria-label="Next slide">❯</button>
-      </div>
-      <div class="event-details">
-        <p>Includes: AV equipment, catering options, meeting rooms, and professional lighting.</p>
-        <a href="pricing.html" class="event-link">View Pricing</a>
-      </div>
-    </article>
+    </footer>
 
-    <article class="event-card">
-      <div class="event-header">
-        <h2>Swimming</h2>
-        <p>Enjoy our beautiful swimming pool with stunning garden views.</p>
-      </div>
-      <div class="carousel">
-        <button class="carousel-button prev" aria-label="Previous slide">❮</button>
-        <div class="carousel-track">
-          <img class="carousel-slide" src="images/pool1.1.jpg" alt="Evening event photo 1">
-          <img class="carousel-slide" src="images/pool1.jpg" alt="Evening event photo 2">
-          <img class="carousel-slide" src="images/poolnight.jpg" alt="Evening event photo 3">
-        </div>
-        <button class="carousel-button next" aria-label="Next slide">❯</button>
-      </div>
-      <div class="event-details">
-        <p>Includes: Stage lighting, live performance setup, and refreshment bars.</p>
-        <a href="pricing.html" class="event-link">View Pricing</a>
-      </div>
-    </article>
-  </div>
-</section>
-
-<footer>
-  <div><a href="contact us.html">Contact us</a></div>
-  <div>Follow us:<i class="fa-brands fa-tiktok"></i>    <i class="fa-brands fa-facebook"></i>   <i class="fa-brands fa-whatsapp"></i> </div>
-  <div>b2nkwe@yahoo.com</div>
-</footer>
-<div class="copyright">© 2026 Ells Garden. All rights reserved.</div>
+    <div class="copyright">© 2026 Ells Garden. All rights reserved.</div>
 
 </div>
 
 <script>
-const translations = {
-  en:{
-    home:"Homepage",
-    gallery:"Gallery",
-    about:"About Us",
-    events:"Events",
-    pricing:"Pricing",
-    location:"Location",
-    contact:"Contact Us",
-    footer1:"Contact us"
-  },
+let index = 0;
+function visibleSlides(){
+    if(window.innerWidth <= 600) return 1;
+    if(window.innerWidth <= 900) return 2;
+    return 4;
+}
+function moveSlide(step){
+    const track = document.getElementById("track");
+    const slides = document.querySelectorAll(".slide");
+    const total = slides.length;
+    index += step;
+    if(index < 0) index = total - visibleSlides();
+    if(index > total - visibleSlides()) index = 0;
+    const slideWidth = slides[0].offsetWidth + 25;
+    track.style.transform = `translateX(-${index * slideWidth}px)`;
+}
+setInterval(()=>moveSlide(1),3000);
+</script>
 
-  tn:{
-    home:"Gae",
-    gallery:"Ditshwantsho",
-    about:"Ka Rona",
-    events:"Ditiragalo",
-    pricing:"Ditlhwatlhwa",
-    location:"Lefelo",
-    contact:"Ikgolaganye",
-    footer1:"Ikgolaganye"
-  }
+<script>
+const translations = {
+    en: {
+        home:"HOME",
+        gallery:"GALLERY",
+        about:"ABOUT US",
+        events:"EVENTS",
+        pricing:"PRICING",
+        location:"LOCATION",
+        contact:"CONTACT US",
+        feedback:"FEEDBACK"
+    },
+    tn: {
+        home:"Gae",
+        gallery:"Ditshwantsho",
+        about:"Ka Rona",
+        events:"Ditiragalo",
+        pricing:"Ditlhwatlhwa",
+        location:"Lefelo",
+        contact:"Ikgolaganye",
+        feedback:"Maikutlo"
+    }
 };
 
 function setLanguage(lang){
-  document.getElementById("home").innerText = translations[lang].home;
-  document.getElementById("gallery").innerText = translations[lang].gallery;
-  document.getElementById("about").innerText = translations[lang].about;
-  document.getElementById("events").innerText = translations[lang].events;
-  document.getElementById("pricing").innerText = translations[lang].pricing;
-  document.getElementById("location").innerText = translations[lang].location;
-  document.getElementById("contact").innerText = translations[lang].contact;
-  document.getElementById("footer1").innerText = translations[lang].footer1;
-}
-
-function setupCarousels(){
-  document.querySelectorAll('.carousel').forEach(carousel => {
-    const track = carousel.querySelector('.carousel-track');
-    const slides = carousel.querySelectorAll('.carousel-slide');
-    const prev = carousel.querySelector('.prev');
-    const next = carousel.querySelector('.next');
-    let currentIndex = 0;
-
-    const updateTrack = () => {
-      track.style.transform = `translateX(-${currentIndex * 100}%)`;
-    };
-
-    prev.addEventListener('click', () => {
-      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-      updateTrack();
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+        const id = link.id;
+        if (translations[lang][id]) {
+            link.textContent = translations[lang][id];
+        }
     });
-
-    next.addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % slides.length;
-      updateTrack();
-    });
-
-    updateTrack();
-  });
+    localStorage.setItem("language", lang);
 }
 
 window.onload = function(){
-  const savedLang = localStorage.getItem("language") || "en";
-  setLanguage(savedLang);
-  setupCarousels();
+    const savedLang = localStorage.getItem("language") || "en";
+    setLanguage(savedLang);
 }
 </script>
-
 </body>
 </html>

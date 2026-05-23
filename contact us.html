@@ -2,81 +2,83 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Ells Garden - Contact</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - Ells Garden</title>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body class="page-contact">
 
-<div class="top-bar">
-    <div class="left-group">
-        <div class="search-box">
-            <input type="text" placeholder="Search...">
-            <span class="search-icon">⌕</span>
-        </div>
-        <div class="lang-select">
-            🌍
-            <select onchange="setLanguage(this.value)">
-                <option value="en">EN</option>
-                <option value="tn">TN</option>
-            </select>
-        </div>
-    </div>
-    <img class="logo-img" src="images/logom.png" alt="logo" width="200px" height="100px">
-</div>
+<div class="page">
 
-<div class="container">
-
-    <div class="header">
-        <h2>CONTACT US 📞</h2>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="left-group">
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <span class="search-icon">⌕</span>
+            </div>
+            <div class="lang-box">
+                <img src="imagesl/earth-americas-solid.png" width="28px">
+                <select onchange="setLanguage(this.value)">
+                    <option value="en">EN</option>
+                    <option value="tn">TN</option>
+                </select>
+            </div>
+        </div>
+        <img src="images4/logomf.png" width="100px" height="100px" alt="My Logo" class="top-right-logomf">
     </div>
 
+    <!-- Main Navigation (Same as other pages) -->
     <nav>
-        <a href="index.html" id="home">HOME</a>
-        <a href="about us.html" id="about">ABOUT US</a>
-        <a href="events.html" id="events">EVENTS</a>
-        <a href="gallery.html" id="gallery">GALLERY</a>
-        <a href="pricing.html" id="pricing">PRICING</a>
-        <a href="location.html" id="location">LOCATION</a>
-        <a href="contact us.html" id="contact">CONTACT US</a>
-        <a href="feedback.html" id="feedback">FEEDBACK</a>
+        <ul class="nav-links">
+            <li><a href="index.html" id="home">Homepage</a></li>
+            <li><a href="about us.html" id="about">About Us</a></li>
+            <li><a href="gallery.html" id="gallery">Gallery</a></li>
+            <li><a href="events.html" id="events">Events</a></li>
+            <li><a href="pricing.html" id="pricing">Pricing</a></li>
+            <li><a href="location.html" id="location">Location</a></li>
+            <li><a href="contact us.html" id="contact">Contact Us</a></li>
+            <li><a href="feedback.html" id="feedback">Feedback</a></li>
+        </ul>
     </nav>
 
-    <h3 class="centered-text">CONTACT/BOOKING</h3>
+    <!-- Main Content -->
+    <div class="container">
+        <div class="header">
+            <h2>CONTACT US 📞</h2>
+        </div>
 
-    <form action="feedback.html" method="get">
-    <label for="name">Full Name</label>
-    <input type="text" id="name" name="name" required>
- 
-    <label for="phone">Phone Number</label>
-    <input type="text" id="phone" name="phone" required>
- 
-    <label for="email">Email Address</label>
-    <input type="email" id="email" name="email" required>
- 
-    <label for="subject">Event Type</label>
-    <input type="text" id="subject" name="subject" required>
+        <h3 class="centered-text">CONTACT / BOOKING</h3>
 
-    <label for="message">Email Message</label>
-    <textarea id="message" name="message" required></textarea>
+        <form action="feedback.html" method="get">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" name="phone" required>
+            
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="subject">Event Type</label>
+            <input type="text" id="subject" name="subject" required>
+            
+            <label for="message">Email Message</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <label for="date">Preferred Date</label>
+            <input type="date" id="date" name="date" required>
+            
+            <div class="buttons">
+                <button type="reset" class="clear-btn">Clear</button>
+                <button type="submit" class="submit-btn">Submit</button>
+            </div>
+        </form>
 
-    <label for="date">Preferred Date</label>
-    <input type="date" id="date" name="date" required>
-
-
-    <div class="buttons">
-        <button type="reset" class="clear-btn">Clear</button>
-        <button type="submit" class="submit-btn">Submit</button>
-    </div>
-</form>
         <div class="form-right">
             <h4>Contact us</h4>
-            <p>
-                Phone numbers: +267 73333174,<br>
-                72433286,<br>
-                71299479
-            </p>
+            <p>Phone numbers: +267 73333174,<br>72433286,<br>71299479</p>
             <p>Email: b2nkwe@yahoo.com</p>
         </div>
 
@@ -88,57 +90,53 @@
                 <li>Sunday: Closed</li>
             </ul>
         </div>
-
     </div>
-</div>
 
-<footer>
-        <div><a href="contact us.html">Contact us</a></div>
-        <div>Follow us:<i class="fa-brands fa-tiktok"></i>    <i class="fa-brands fa-facebook"></i>   <i class="fa-brands fa-whatsapp"></i> </div>
-        <div>b2nkwe@yahoo.com</div>
+    <footer>
+        <div>
+            <h4>Quick Links</h4>
+            <a href="contact us.html">Contact us</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="location.html">Location</a>
+            <a href="events.html">Events</a>
+        </div>
+        <div>
+            <h4>Follow us:</h4>
+            <p><a class="social-label" href="https://www.tiktok.com/@ells.garden2?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok"></i> Tiktok</a></p>
+            <p><a class="social-label" href="https://www.instagram.com/ellsgarden2?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> Instagram</a></p>
+            <p><a class="social-label" href="https://www.facebook.com/share/18urRrZPME/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i> Facebook</a></p>
+        </div>
+        <div>
+            <h4>Contact Information</h4>
+            <p>Email: b2nkwe@yahoo.com</p>
+            <p>Phone: +267 7333 3174</p>
+            <p>Address: Boatle, Botswana</p>
+        </div>
     </footer>
-<div class="copyright">© 2026 Ells Garden. All rights reserved.</div>
+
+    <div class="copyright">© 2026 Ells Garden. All rights reserved.</div>
+
+</div>
 
 <script>
 const translations = {
-  en:{
-    home:"HOME",
-    gallery:"GALLERY",
-    about:"ABOUT US",
-    events:"EVENTS",
-    pricing:"PRICING",
-    location:"LOCATION",
-    contact:"CONTACT US",
-    feedback:"FEEDBACK"
-  },
-  tn:{
-    home:"Gae",
-    gallery:"Ditshwantsho",
-    about:"Ka Rona",
-    events:"Ditiragalo",
-    pricing:"Ditlhwatlhwa",
-    location:"Lefelo",
-    contact:"Ikgolaganye",
-    feedback:"Maikutlo"
-  }
+    en: { home:"HOME", gallery:"GALLERY", about:"ABOUT US", events:"EVENTS", pricing:"PRICING", location:"LOCATION", contact:"CONTACT US", feedback:"FEEDBACK" },
+    tn: { home:"Gae", gallery:"Ditshwantsho", about:"Ka Rona", events:"Ditiragalo", pricing:"Ditlhwatlhwa", location:"Lefelo", contact:"Ikgolaganye", feedback:"Maikutlo" }
 };
 
 function setLanguage(lang){
-  const navLinks = document.querySelectorAll('nav a');
-  navLinks.forEach(link => {
-    const id = link.id;
-    if (translations[lang][id]) {
-      link.textContent = translations[lang][id];
-    }
-  });
-  localStorage.setItem("language", lang);
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+        const id = link.id;
+        if (translations[lang][id]) link.textContent = translations[lang][id];
+    });
+    localStorage.setItem("language", lang);
 }
 
 window.onload = function(){
-  const savedLang = localStorage.getItem("language") || "en";
-  setLanguage(savedLang);
+    const savedLang = localStorage.getItem("language") || "en";
+    setLanguage(savedLang);
 }
 </script>
-
 </body>
 </html>

@@ -12,66 +12,107 @@
 <body class="page-about">
 
 <div class="top-bar">
-    <div class="left-group">
-        <div class="search-box">
-            <input type="text" placeholder="Search...">
-            <span class="search-icon">⌕</span>
-        </div>
-        <div class="lang-box">
-            🌍
-            <select>
-                <option>EN</option>
-                <option>TN</option>
-            </select>
-        </div>
+  <div class="left-group">
+    
+    <div class="search-box">
+      <input type="text" placeholder="Search...">
+      <span class="search-icon">⌕</span>
     </div>
-  <img class="logo-img" src="images/logom.png" alt="logo" width="200px" height="100px">
+
+    <div class="lang-box">
+      <img src="imagesl/earth-americas-solid.png" width="28px">
+      <select onchange="setLanguage(this.value)">
+        <option value="en">EN</option>
+        <option value="tn">TN</option>
+      </select>
+    </div>
+
+  </div>
+
+  <img src="images4/logomf.png" width="100px" height="100px" alt="My Logo" class="top-right-logomf">
+
 </div>
 
 <nav>
-    <a href="index.html">Homepage</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="about us.html">About Us</a>
-    <a href="events.html">Events</a>
-    <a href="pricing.html">Pricing</a>
-    <a href="location.html">Location</a>
-    <a href="contact us.html">Contact us</a>
-    <a href="feedback.html">Feedback</a>
+  <ul class="nav-links">
+    <li><a href="index.html" id="home">Homepage</a></li>
+    <li><a href="about us.html" id="about">About Us</a></li>
+    <li><a href="gallery.html" id="gallery">Gallery</a></li>
+    <li><a href="events.html" id="events">Events</a></li>
+    <li><a href="pricing.html" id="pricing">Pricing</a></li>
+    <li><a href="location.html" id="location">Location</a></li>
+    <li><a href="contact us.html" id="contact">Contact Us</a></li>
+    <li><a href="feedback.html" id="feedback">Feedback</a></li>
+  </ul>
 </nav>
+
+<section class="content">
+<banner class="hero">
+  <img src="images3/sign.jpg" width="100%" height="300px" object-fit="cover" alt="Garden Sign">
+
 
 <main>
 
+  <div class="section-title">ABOUT ELLS GARDEN</div>
 
-    <div class="section-title">ABOUT ELLS GARDEN</div>
-
-    <div class="image-row">
-
-        <div class="image-large">
-            <img src="images/sign.jpg" width="100px" height="100px" alt="Garden Main View">
-        </div>
-
-        <div class="image-small">
-            <img src="images/IMG_0494.MOV" alt="Garden Side View">
-        </div>
-
-    </div>
-
-    <div class="about-text">
-        Ells Garden is a family-owned event garden in Boatle established in 2023.
-        It was created from a shared family vision to provide a beautiful and relaxing
-        space for photoshoots, weddings, celebrations, and other gatherings.
-        Our objective is to grow bigger, possibly have other places in Botswana,
-        while creating memorable experiences for every guest.
-    </div>
+  <div class="about-text">
+    Ells Garden is a family-owned event garden in Boatle established in 2023.
+    It was created from a shared family vision to provide a beautiful and relaxing
+    space for photoshoots, weddings, celebrations, and other gatherings.
+    Our objective is to grow bigger, possibly have other places in Botswana,
+    while creating memorable experiences for every guest.
+  </div>
 
 </main>
 
 <footer>
-    <div><a href="contact us.html">Contact us</a></div>
-    <div>Follow us:<i class="fa-brands fa-tiktok"></i>    <i class="fa-brands fa-facebook"></i>   <i class="fa-brands fa-whatsapp"></i> </div>
-    <div>b2nkwe@yahoo.com</div>
+    <div>
+      <h4>Quick Links</h4>
+      <a href="contact us.html">Contact us</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="location.html">Location</a>
+      <a href="events.html">Events</a>
+    </div>
+    <div>
+      <h4>Follow us:</h4>
+      <p><a class="social-label" href="https://www.tiktok.com/@ells.garden2?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" onclick="window.open(this.href, '_blank'); return false;" title="Tiktok"><i class="fa-brands fa-tiktok"></i> Tiktok</a></p>
+      <p><a class="social-label" href="https://www.instagram.com/ellsgarden2?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" onclick="window.open(this.href, '_blank'); return false;" title="Instagram"><i class="fa-brands fa-instagram"></i> Instagram</a></p>
+      <p><a class="social-label" href="https://www.facebook.com/share/18urRrZPME/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" onclick="window.open(this.href, '_blank'); return false;" title="Facebook"><i class="fa-brands fa-facebook"></i> Facebook</a></p>
+    </div>
+    <div>
+      <h4>Contact Information</h4>
+      <p>Email: b2nkwe@yahoo.com</p>
+      <p>Phone: +267 7333 3174</p>
+      <p>Address: Boatle, Botswana</p>
+    </div>
 </footer>
 <div class="copyright">© 2026 Ells Garden. All rights reserved.</div>
+
+<script>
+let index = 0;
+
+function visibleSlides(){
+  if(window.innerWidth <= 600) return 1;
+  if(window.innerWidth <= 900) return 2;
+  return 4;
+}
+
+function moveSlide(step){
+  const track = document.getElementById("track");
+  const slides = document.querySelectorAll(".slide");
+  const total = slides.length;
+
+  index += step;
+
+  if(index < 0) index = total - visibleSlides();
+  if(index > total - visibleSlides()) index = 0;
+
+  const slideWidth = slides[0].offsetWidth + 25;
+  track.style.transform = `translateX(-${index * slideWidth}px)`;
+}
+
+setInterval(()=>moveSlide(1),3000);
+</script>
 
 <script>
 const translations = {
@@ -116,3 +157,9 @@ window.onload = function(){
 
 </body>
 </html>
+
+
+
+
+
+
