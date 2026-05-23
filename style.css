@@ -12,7 +12,7 @@ html, body {
 body{
   display:flex;
   flex-direction:column;
-  background:#dbb77e;
+  background:#fffcf8;
 }
 
 a { color:inherit; }
@@ -34,24 +34,64 @@ a { color:inherit; }
   gap:15px;
   flex-wrap:wrap;
 }
-
-.search-box{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:0 15px;
-  background:white;
+/* ================== SEARCH BOX ================== */
+/* ================== TOP BAR ================== */
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  background: #062d1e;
+  padding: 12px 20px;
+  width: 100%;           /* Added */
+  margin: 0;             /* Added */
 }
 
-.search-box input{
-  border:none;
-  outline:none;
-  width:100%;
-  font-size:22px;
+/* ================== SEARCH BOX ================== */
+.search-box {
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 3px solid #12394a;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 58px;
+  width: 340px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
-.search-icon{
-  font-size:28px;
+.search-box input {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 0 15px;
+  font-size: 18px;
+  background: transparent;
+  color: #333;
+}
+
+.search-box input::placeholder {
+  color: #777;
+}
+
+.search-icon {
+  font-size: 28px;
+  color: #0f6487;
+  padding-right: 15px;
+  cursor: pointer;
+}
+
+/* Make search box consistent on all pages */
+body.page-events .search-box,
+body.page-pricing .search-box,
+body.page-location .search-box,
+body.page-contact .search-box,
+body.page-feedback .search-box,
+body.page-about .search-box,
+body.page-gallery .search-box {
+    width: 320px;
+    height: 55px;
 }
 
 .lang-box,
@@ -94,26 +134,28 @@ nav {
 }
 
 /* NAV LINKS */
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-    margin: 0;
-    padding: 0;
-    flex-wrap: wrap;
-    justify-content: center;
+nav {
+  background: #1f2230;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 0;
+  flex-wrap: wrap;
+  width: 100%;           /* Important */
+  margin: 0;             /* Important */
 }
 
-/* LINKS */
-.nav-links a {
-    text-decoration: none;
-    color: white;
-    font-size: 17px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    transition: 0.3s ease;
-    letter-spacing: 0.5px;
-    padding: 12px 18px;
+/* NAV LINKS */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;           /* Added */
 }
 
 
@@ -192,9 +234,6 @@ footer a.social-label:hover {
 }
 
 /* Index page */
-body.page-index{
-}
-
 body.page-index .search-box{
   width:340px;
   height:58px;
@@ -271,158 +310,282 @@ body.page-index .left-arrow{left:10px;}
 body.page-index .right-arrow{right:10px;}
 
 /* Events page */
-body.page-events{
-  padding:20px;
+/* ================== EVENTS PAGE - FULL EDGE TO EDGE ================== */
+body.page-events {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    background: #dbb77e;
 }
 
-body.page-events .page{
-  background:#f4f4f4;
-  overflow:visible;
+body.page-events .page {
+    background: #f4f4f4;
+    margin: 0;
+    border-radius: 0;
+    min-height: 100vh;
+    overflow: visible;
+    width: 100%;
 }
 
-body.page-events .search-box{
-  width:340px;
-  height:58px;
-  border:3px solid #12394a;
-  border-radius:12px;
+/* Card Container - Full width, no outer margins */
+body.page-events .card-container {
+    padding: 40px 0;           /* Only top & bottom spacing */
+    background: white;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
 }
 
-body.page-events .events{
-  padding:0;
-  background:white;
-  margin:0;
-  border-radius:10px;
+/* Cards - 2 per row */
+body.page-events .card {
+    flex: 1 1 calc(50% - 25px);     /* 2 cards per row */
+    max-width: calc(50% - 25px);
+    background: #ffffff;
+    border: 2px solid #d4e7f2;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
 }
 
-body.page-events .event-grid{
-  display:grid;
-  grid-template-columns:repeat(2, minmax(0, 1fr));
-  gap:30px;
+body.page-events .card:hover {
+    transform: translateY(-8px);
 }
 
+body.page-events .card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+body.page-events .card-content {
+    padding: 20px;
+}
+
+body.page-events .card-content h2 {
+    margin: 0 0 12px 0;
+    color: #0f4f6e;
+}
+
+body.page-events .card-content p {
+    margin: 0 0 18px 0;
+    line-height: 1.6;
+    color: #324451;
+}
+
+body.page-events .event-link {
+    display: inline-block;
+    background: #0f6487;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 16px;
+}
+
+body.page-events .event-link:hover {
+    background: #084d6a;
+}
+
+/* Mobile - 1 card per row */
 @media (max-width: 768px) {
-  body.page-events .event-grid {
-    grid-template-columns: 1fr;
-  }
+    body.page-events .card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    
+    body.page-events .card-container {
+        padding: 30px 15px;
+        gap: 20px;
+    }
+}
+/* ================== PRICING PAGE - BEAUTIFUL TABLE ================== */
+body.page-pricing {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    background: #ffffff;
 }
 
-body.page-events .event-card{
-  background:#ffffff;
-  border:2px solid #d4e7f2;
-  border-radius:16px;
-  padding:25px;
+body.page-pricing .page {
+    margin: 0;
+    border-radius: 0;
+    min-height: 100vh;
+    overflow: visible;
 }
 
-body.page-events .event-header h2{
-  font-size:24px;
-  margin-bottom:10px;
-  color:#0f4f6e;
+/* Main Content Area */
+body.page-pricing #pricing-section {
+    padding: 60px 20px 40px;
+    background: white;
+    margin: 0;
+    width: 100%;
 }
 
-body.page-events .event-header p{
-  color:#324451;
-  line-height:1.6;
-  margin-bottom:20px;
+body.page-pricing .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
-
-body.page-events .event-details{
-  margin-top:20px;
+/* Title & Subtitle */
+body.page-pricing h2 {
+    text-align: center;
+    font-size: 42px;
+    color: #1f2230;
+    margin-bottom: 8px;
 }
 
-body.page-events .event-details p{
-  margin-bottom:10px;
-  color:#324451;
+body.page-pricing .text-muted {
+    text-align: center;
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 40px;
 }
 
-body.page-events .event-link{
-  display:inline-block;
-  background:#0f6487;
-  color:white;
-  padding:10px 20px;
-  text-decoration:none;
-  border-radius:5px;
-  font-size:16px;
+/* Table Styling */
+body.page-pricing table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+    margin: 0 auto;
 }
 
-body.page-events .event-link:hover{
-  background:#084d6a;
+body.page-pricing th,
+body.page-pricing td {
+    padding: 20px 25px;
+    text-align: left;
+    font-size: 17px;
+}
+
+body.page-pricing th {
+    background: #0f6487;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+body.page-pricing td {
+    border-bottom: 1px solid #eee;
+    color: #333;
+}
+
+body.page-pricing tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+body.page-pricing tr:hover {
+    background-color: #f0f7ff;
+    transition: all 0.3s ease;
+}
+
+body.page-pricing td:last-child {
+    font-weight: bold;
+    color: #0f6487;
+    font-size: 18px;
+}
+
+/* Price Column Highlight */
+body.page-pricing td:last-child {
+    background: #f0f7ff;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    body.page-pricing table {
+        font-size: 15px;
+    }
+    body.page-pricing th,
+    body.page-pricing td {
+        padding: 16px 12px;
+    }
 }
 
 /* Contact page */
-body.page-contact{
+body.page-contact {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    background: #ffffff;
 }
 
-body.page-contact .search-box{
-  width:320px;
-  height:58px;
-  border:3px solid #0b3850;
-  border-radius:12px;
+body.page-contact .page {
+    margin: 0;
+    border-radius: 0;
+    min-height: 100vh;
+    overflow: visible;
 }
 
-body.page-contact .container{
-  width:90%;
-  margin:20px auto;
-  background:#eee;
-  border-radius:15px;
-  padding:0;
+body.page-contact .container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+    background: #f7f7f7;
+    border-radius: 15px;
+    padding: 40px 30px;
 }
 
-body.page-contact .header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-body.page-contact .form-right{
-  width:30%;
-}
-
-body.page-contact label{
-  display:block;
-  margin:12px 0 6px;
-  font-size:18px;
-  color:#1f2430;
+/* Form Styling */
+body.page-contact label {
+    display: block;
+    margin: 12px 0 6px;
+    font-size: 18px;
+    color: #1f2430;
 }
 
 body.page-contact input,
-body.page-contact textarea{
-  width:100%;
-  box-sizing:border-box;
-  padding:8px;
-  margin:0 0 16px;
-  background:#2c5c8a;
-  border:none;
-  color:white;
+body.page-contact textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    margin-bottom: 16px;
+    background: #2c5c8a;
+    border: none;
+    color: white;
+    border-radius: 6px;
 }
 
-body.page-contact textarea{
-  height:60px;
+body.page-contact textarea {
+    height: 120px;
+    resize: vertical;
 }
 
-body.page-contact .buttons{
-  margin-top:10px;
+body.page-contact .buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
 }
 
 body.page-contact .clear-btn,
-body.page-contact .submit-btn{
-  padding:8px 20px;
-  border:none;
-  color:white;
+body.page-contact .submit-btn {
+    padding: 12px 25px;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-body.page-contact .clear-btn{
-  background:red;
-}
+body.page-contact .clear-btn { background: #e74c3c; }
+body.page-contact .submit-btn { background: #2ecc71; }
 
-body.page-contact .submit-btn{
-  background:green;
+/* Right side info */
+body.page-contact .form-right,
+body.page-contact .operating-hours {
+    margin-top: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
 }
-
 /* Feedback page */
-body.page-feedback{
-}
-
 body.page-feedback header{
   border-bottom:2px solid #2e7fa3;
   padding:18px 30px;
@@ -538,63 +701,61 @@ body.page-pricing #pricing-section{
 }
 
 /* Location page */
-body.page-location{
-  padding:5px;
+/* ================== LOCATION PAGE - FULL EDGE TO EDGE ================== */
+body.page-location {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    background: #dbb77e;
 }
 
-body.page-location .page{
-  background:#f4f4f4;
-  min-height:100vh;
-  overflow:visible;
+body.page-location .page {
+    background: #f4f4f4;
+    margin: 0;
+    border-radius: 0;
+    min-height: 100vh;
+    overflow: visible;
+    width: 100%;
 }
 
-body.page-location .search-box{
-  display:flex;
-  align-items:center;
-  border:2px solid #222;
-  padding:10px;
-  width:330px;
+/* Main Content Area */
+body.page-location .content {
+    padding: 40px 20px;        /* Only inner padding */
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-body.page-location .search-box input{
-  border:none;
-  outline:none;
-  width:100%;
-  font-size:18px;
-  background:transparent;
+body.page-location .location-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
 }
 
-body.page-location .content{
-  padding:30px;
+body.page-location .location-grid img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 12px;
 }
 
-body.page-location .content h1{
-  font-size:45px;
-  margin-bottom:30px;
+body.page-location .info {
+    font-size: 28px;
+    line-height: 1.6;
+    padding: 10px;
 }
 
-body.page-location .location-grid{
-  display:grid;
-  grid-template-columns:2fr 1fr;
-  gap:40px;
-}
-
+/* Mobile */
 @media (max-width: 768px) {
-  body.page-location .location-grid {
-    grid-template-columns: 1fr;
-  }
+    body.page-location .location-grid {
+        grid-template-columns: 1fr;
+    }
+    body.page-location .content {
+        padding: 30px 15px;
+    }
 }
 
-body.page-location .location-grid img{
-  width:100%;
-  height:430px;
-  object-fit:cover;
-}
-
-body.page-location .info{
-  font-size:28px;
-  line-height:1.6;
-}
 
 /* About page */
 body.page-about{
@@ -732,4 +893,73 @@ body.page-gallery .gallery img{
   .page-index .book-btn {
     font-size: 5 rem;
   }
+}
+
+/* === STRONG FIX FOR BLUE SEARCH BAR === */
+.search-box {
+    background: white !important;
+    border: 3px solid #12394a !important;
+    border-radius: 12px !important;
+    overflow: hidden;
+    height: 58px;
+    width: 340px;
+    display: flex;
+    align-items: center;
+}
+
+.search-box input {
+    background: white !important;
+    color: #333 !important;
+    padding: 0 15px !important;
+    font-size: 18px !important;
+    border: none !important;
+    outline: none !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.search-box input:focus {
+    background: white !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.search-icon {
+    padding-right: 15px;
+    font-size: 28px;
+    color: #0f6487;
+  
+}
+
+/* ================== FINAL FIX FOR FULL WIDTH TOP BAR & NAV ================== */
+body, html, .page, header, nav, .top-bar, .nav-links {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+}
+
+.top-bar {
+    padding: 12px 20px !important;
+    width: 100% !important;
+}
+
+nav {
+    padding: 18px 0 !important;
+    width: 100% !important;
+}
+
+.nav-links {
+    width: 100% !important;
+    justify-content: center !important;
+}
+
+/* Remove border-radius from .page on pages with top bar */
+body.page-feedback .page,
+body.page-contact .page,
+body.page-events .page,
+body.page-pricing .page {
+    border-radius: 0 !important;
+    margin: 0 !important;
 }
