@@ -47,52 +47,35 @@ a { color:inherit; }
   width: 100%;           /* Added */
   margin: 0;             /* Added */
 }
-
-/* ================== SEARCH BOX ================== */
-.search-box {
-  display: flex;
-  align-items: center;
-  background: white;
-  border: 3px solid #12394a;
-  border-radius: 12px;
-  overflow: hidden;
-  height: 58px;
-  width: 340px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+/* Booking Button */
+.booking-link {
+    background: linear-gradient(135deg, #0f6487, #1e9bd4);
+    color: white;
+    padding: 16px 28px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;           /* Makes it pill-shaped button */
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(15, 100, 135, 0.4);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    border: none;
+    cursor: pointer;
 }
 
-.search-box input {
-  border: none;
-  outline: none;
-  width: 100%;
-  padding: 0 15px;
-  font-size: 18px;
-  background: transparent;
-  color: #333;
+.booking-link:hover {
+    background: linear-gradient(135deg, #0b4f6b, #1a8ac9);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(15, 100, 135, 0.5);
+    color: white;
 }
 
-.search-box input::placeholder {
-  color: #777;
+.booking-link:active {
+    transform: translateY(1px);
 }
 
-.search-icon {
-  font-size: 28px;
-  color: #0f6487;
-  padding-right: 15px;
-  cursor: pointer;
-}
 
-/* Make search box consistent on all pages */
-body.page-events .search-box,
-body.page-pricing .search-box,
-body.page-location .search-box,
-body.page-contact .search-box,
-body.page-feedback .search-box,
-body.page-about .search-box,
-body.page-gallery .search-box {
-    width: 320px;
-    height: 55px;
-}
 
 .lang-box,
 .lang-select{
@@ -142,8 +125,8 @@ nav {
   align-items: center;
   padding: 18px 0;
   flex-wrap: wrap;
-  width: 100%;           /* Important */
-  margin: 0;             /* Important */
+  width: 100%;           
+  margin: 0;             
 }
 
 /* NAV LINKS */
@@ -288,7 +271,7 @@ body.page-index .slide{
 
 body.page-index .slide img{
   width:100%;
-  height:235px;
+  height: 235px;
   object-fit:cover;
   display:block;
 }
@@ -315,7 +298,7 @@ body.page-events {
     padding: 0;
     margin: 0;
     min-height: 100vh;
-    background: #dbb77e;
+    background: #ffffff;
 }
 
 body.page-events .page {
@@ -390,18 +373,6 @@ body.page-events .event-link:hover {
     background: #084d6a;
 }
 
-/* Mobile - 1 card per row */
-@media (max-width: 768px) {
-    body.page-events .card {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
-    
-    body.page-events .card-container {
-        padding: 30px 15px;
-        gap: 20px;
-    }
-}
 /* ================== PRICING PAGE - BEAUTIFUL TABLE ================== */
 body.page-pricing {
     padding: 0;
@@ -497,18 +468,6 @@ body.page-pricing td:last-child {
 body.page-pricing td:last-child {
     background: #f0f7ff;
 }
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    body.page-pricing table {
-        font-size: 15px;
-    }
-    body.page-pricing th,
-    body.page-pricing td {
-        padding: 16px 12px;
-    }
-}
-
 /* Contact page */
 body.page-contact {
     padding: 0;
@@ -746,17 +705,6 @@ body.page-location .info {
     padding: 10px;
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-    body.page-location .location-grid {
-        grid-template-columns: 1fr;
-    }
-    body.page-location .content {
-        padding: 30px 15px;
-    }
-}
-
-
 /* About page */
 body.page-about{
   min-height:100vh;
@@ -883,18 +831,6 @@ body.page-gallery .gallery img{
   margin: top 16px;
 }
 
-@media (min-width: 481px) and (max-width: 768px)
- {
-  .nav-links {
-    display: none;
-  }
- }
-@media only screen{
-  .page-index .book-btn {
-    font-size: 5 rem;
-  }
-}
-
 /* === STRONG FIX FOR BLUE SEARCH BAR === */
 .search-box {
     background: white !important;
@@ -962,4 +898,145 @@ body.page-events .page,
 body.page-pricing .page {
     border-radius: 0 !important;
     margin: 0 !important;
+}
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+/* ================== RESPONSIVE MEDIA QUERIES ================== */
+
+/* ===================== SMALL MOBILE PHONES (≤ 480px) ===================== */
+@media (max-width: 480px) {
+
+    /* Top Bar */
+    .top-bar {
+        flex-direction: column;
+        padding: 15px;
+        gap: 12px;
+    }
+
+    .left-group {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    /* Booking Button */
+    .booking-link {
+        width: 100%;
+        text-align: center;
+        padding: 14px 20px;
+        font-size: 17px;
+    }
+
+    /* Logo */
+    .top-right-logomf {
+        width: 80px;
+    }
+
+    /* Navigation */
+    .nav-links {
+        flex-direction: column;
+        gap: 6px;
+        align-items: center;
+    }
+
+    nav a {
+        padding: 12px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Gallery Page */
+    body.page-gallery .gallery {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    /* Carousel */
+    body.page-index .slide {
+        min-width: 100%;
+    }
+
+    .slide img {
+        height: 190px;
+    }
+
+    /* Pricing Table */
+    body.page-pricing table {
+        font-size: 14px;
+    }
+    
+    body.page-pricing th,td {
+        padding: 12px 8px;
+    }
+}
+
+/* ===================== TABLETS (481px - 768px) ===================== */
+@media (min-width: 481px) and (max-width: 768px) {
+
+    .top-bar {
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    body.page-gallery .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .slide img {
+        height: 220px;
+    }
+
+    /* Pricing Table */
+    body.page-pricing table {
+        font-size: 15px;
+    }
+    
+    body.page-pricing th,
+    body.page-pricing td {
+        padding: 16px 12px;
+    }
+}
+
+/* ===================== LARGE SCREENS - LIMIT WIDTH ===================== */
+@media (min-width: 1200px) {
+
+    .page {
+        max-width: 1200px;
+        margin: 0 auto;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    /* Only limit these, keep footer full width */
+    .top-bar,
+    nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    /* Footer stays full width */
+    footer,
+    .copyright {
+        width: 100%;
+    }
+}
+
+/* ===================== Small Adjustments ===================== */
+@media (max-width: 360px) {
+    .booking-link {
+        font-size: 16px;
+        padding: 13px 18px;
+    }
 }
