@@ -10,29 +10,25 @@
 
 <body class="page-index">
 
-<!-- TOP -->
+<!-- TOP BAR -->
 <div class="top-bar">
-  <div class="left-group">
-    
-    <div class="search-box">
-      <input type="text" id="searchInput" placeholder="Search..."
-       onkeyup="searchPages()">
-      <span class="search-icon">⌕</span>
+    <div class="left-group">
+        <!-- Booking Link -->
+        <a href="contact us.html" class="booking-link">
+            Open for 2026 Bookings
+        </a>
+
+        <!-- Language Selector -->
+        <div class="lang-box">
+            <img src="imagesl/earth-americas-solid.png" width="28px" alt="Language">
+            <select onchange="setLanguage(this.value)">
+                <option value="en">EN</option>
+                <option value="tn">TN</option>
+            </select>
+        </div>
     </div>
-    <ul id="results"></ul>
 
-    <div class="lang-box">
-      <img src="imagesl/earth-americas-solid.png" width="28px">
-      <select onchange="setLanguage(this.value)">
-        <option value="en">EN</option>
-        <option value="tn">TN</option>
-      </select>
-    </div>
-
-  </div>
-
-  <img src="images4/logomf.png" width="100px" height="100px" alt="My Logo" class="top-right-logomf">
-
+    <img src="images4/logomf.png" width="100px" height="100px" alt="Ells Garden Logo" class="top-right-logomf">
 </div>
 
 <!-- NAV -->
@@ -61,13 +57,12 @@
   <div class="carousel-wrapper">
     <div class="carousel-track" id="track">
 
-      <div class="slide"><img src="images4/flowers.jpg"></div>
-      <div class="slide"><img src="images4/gardenfront.jpg"></div>
-      <div class="slide"><img src="images3/pool1.1.jpg"></div>
-      <div class="slide"><img src="images4/o.g.jpg"></div>
-      <div class="slide"><img src="imagesg/IMG_5540.JPG"></div>
-      <div class="slide"><img src="images4/hall.jpg"></div>
-      <div class="slide"><img src="imagesg/IMG_5587.JPG"></div>
+      <div class="slide"><img src="images4/flowers.jpg" alt="flowers"></div>
+      <div class="slide"><img src="imagesg/IMG_5540.JPG" alt="flowers"></div>
+      <div class="slide"><img src="images4/hall.jpg" alt="hall"></div>
+      <div class="slide"><img src="imagesg/IMG_0848.JPG" alt="pool"></div>
+      <div class="slide"><img src="imagesl/IMG_5514.JPG" alt="overview"></div>
+    </div>
 
     </div>
   </div>
@@ -79,9 +74,7 @@
 <section class="content">
 <banner class="hero">
   <img src="images4/overview.jpg" alt="Garden Overview">
-  <a href="contact us.html" class="book-btn">Book Now</a>
-
-
+  
 </section>
 </main>
 
