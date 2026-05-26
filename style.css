@@ -832,9 +832,9 @@ body.page-pricing .page {
     display: block;
 }
 
-/* ================== RESPONSIVE MEDIA QUERIES ================== */
+/* RESPONSIVE MEDIA QUERIES */
 
-/* ===================== SMALL MOBILE PHONES (≤ 480px) ===================== */
+/* SMALL MOBILE PHONES (≤ 480px) */
 @media (max-width: 480px) {
 
     /* Top Bar */
@@ -903,7 +903,7 @@ body.page-pricing .page {
     }
 }
 
-/* ===================== TABLETS (481px - 768px) ===================== */
+/* TABLETS (481px - 768px)  */
 @media (min-width: 481px) and (max-width: 768px) {
 
     .top-bar {
@@ -934,7 +934,7 @@ body.page-pricing .page {
     }
 }
 
-/* ===================== LARGE SCREENS - LIMIT WIDTH ===================== */
+/* LARGE SCREENS */
 @media (min-width: 1200px) {
 
     .page {
@@ -945,7 +945,6 @@ body.page-pricing .page {
         overflow: hidden;
     }
 
-    /* Only limit these, keep footer full width */
     .top-bar,
     nav {
         max-width: 1200px;
@@ -960,7 +959,7 @@ body.page-pricing .page {
     }
 }
 
-/* ===================== Small Adjustments ===================== */
+/*  Small Adjustments */
 @media (max-width: 360px) {
     .booking-link {
         font-size: 16px;
