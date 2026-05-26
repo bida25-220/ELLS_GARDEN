@@ -15,7 +15,9 @@ body{
   background:#fffcf8;
 }
 
-a { color:inherit; }
+a { color:inherit; 
+text-decoration:none
+}
 
 /* All pages */
 .top-bar{
@@ -34,8 +36,7 @@ a { color:inherit; }
   gap:15px;
   flex-wrap:wrap;
 }
-/* ================== SEARCH BOX ================== */
-/* ================== TOP BAR ================== */
+/*  TOP BAR  */
 .top-bar {
   display: flex;
   align-items: center;
@@ -44,8 +45,8 @@ a { color:inherit; }
   gap: 15px;
   background: #062d1e;
   padding: 12px 20px;
-  width: 100%;           /* Added */
-  margin: 0;             /* Added */
+  width: 100%;           
+  margin: 0;             
 }
 /* Booking Button */
 .booking-link {
@@ -55,7 +56,6 @@ a { color:inherit; }
     font-size: 18px;
     font-weight: bold;
     text-decoration: none;
-    border-radius: 50px;           /* Makes it pill-shaped button */
     display: inline-block;
     box-shadow: 0 4px 15px rgba(15, 100, 135, 0.4);
     transition: all 0.3s ease;
@@ -138,14 +138,11 @@ nav {
   padding: 0;
   flex-wrap: wrap;
   justify-content: center;
-  width: 100%;           /* Added */
+  width: 100%;          
 }
-
-
 nav a:hover{
   background:#0b4f6b;
 }
-
 
 footer {
   display: flex;
@@ -293,7 +290,7 @@ body.page-index .left-arrow{left:10px;}
 body.page-index .right-arrow{right:10px;}
 
 /* Events page */
-/* ================== EVENTS PAGE - FULL EDGE TO EDGE ================== */
+/* EVENTS PAGE - FULL EDGE TO EDGE */
 body.page-events {
     padding: 0;
     margin: 0;
@@ -310,9 +307,9 @@ body.page-events .page {
     width: 100%;
 }
 
-/* Card Container - Full width, no outer margins */
+/* Card Container  */
 body.page-events .card-container {
-    padding: 40px 0;           /* Only top & bottom spacing */
+    padding: 40px 0;          
     background: white;
     margin: 0;
     width: 100%;
@@ -322,9 +319,9 @@ body.page-events .card-container {
     gap: 25px;
 }
 
-/* Cards - 2 per row */
+/* Cards */
 body.page-events .card {
-    flex: 1 1 calc(50% - 25px);     /* 2 cards per row */
+    flex: 1 1 calc(50% - 25px);   
     max-width: calc(50% - 25px);
     background: #ffffff;
     border: 2px solid #d4e7f2;
@@ -373,7 +370,7 @@ body.page-events .event-link:hover {
     background: #084d6a;
 }
 
-/* ================== PRICING PAGE - BEAUTIFUL TABLE ================== */
+/* PRICING TABLE */
 body.page-pricing {
     padding: 0;
     margin: 0;
@@ -428,11 +425,11 @@ body.page-pricing table {
     margin: 0 auto;
 }
 
-body.page-pricing th,
-body.page-pricing td {
+body.page-pricing th,td {
     padding: 20px 25px;
     text-align: left;
     font-size: 17px;
+
 }
 
 body.page-pricing th {
@@ -468,6 +465,7 @@ body.page-pricing td:last-child {
 body.page-pricing td:last-child {
     background: #f0f7ff;
 }
+
 /* Contact page */
 body.page-contact {
     padding: 0;
@@ -500,8 +498,7 @@ body.page-contact label {
     color: #1f2430;
 }
 
-body.page-contact input,
-body.page-contact textarea {
+body.page-contact input,textarea {
     width: 100%;
     box-sizing: border-box;
     padding: 12px;
@@ -523,8 +520,7 @@ body.page-contact .buttons {
     gap: 15px;
 }
 
-body.page-contact .clear-btn,
-body.page-contact .submit-btn {
+body.page-contact .clear-btn,.submit-btn {
     padding: 12px 25px;
     border: none;
     color: white;
@@ -537,8 +533,7 @@ body.page-contact .clear-btn { background: #e74c3c; }
 body.page-contact .submit-btn { background: #2ecc71; }
 
 /* Right side info */
-body.page-contact .form-right,
-body.page-contact .operating-hours {
+body.page-contact .form-right,.operating-hours {
     margin-top: 30px;
     padding: 20px;
     background: white;
@@ -553,13 +548,6 @@ body.page-feedback header{
 
 body.page-feedback .left-tools{
   gap:10px;
-}
-
-body.page-feedback .search-box input{
-  padding:10px 15px;
-  width:220px;
-  border:1px solid #999;
-  border-radius:20px;
 }
 
 body.page-feedback .language-select select{
@@ -607,9 +595,7 @@ body.page-feedback .form-group label{
   font-weight:bold;
 }
 
-body.page-feedback .form-group input,
-body.page-feedback .form-group select,
-body.page-feedback .form-group textarea{
+body.page-feedback .form-group input,.form-group select,.form-group textarea{
   width:100%;
   padding:12px;
   border:1px solid #bbb;
@@ -645,12 +631,6 @@ body.page-pricing{
   flex-direction:column;
 }
 
-body.page-pricing .search-box{
-  width:320px;
-  padding:10px;
-  border:2px solid #373c3e;
-}
-
 body.page-pricing #pricing-section{
   flex:1;
   padding:40px;
@@ -659,13 +639,12 @@ body.page-pricing #pricing-section{
   border-radius:10px;
 }
 
-/* Location page */
-/* ================== LOCATION PAGE - FULL EDGE TO EDGE ================== */
+/*  LOCATION PAGE */
 body.page-location {
     padding: 0;
     margin: 0;
     min-height: 100vh;
-    background: #dbb77e;
+    background: #f4f4f4;
 }
 
 body.page-location .page {
@@ -677,9 +656,8 @@ body.page-location .page {
     width: 100%;
 }
 
-/* Main Content Area */
 body.page-location .content {
-    padding: 40px 20px;        /* Only inner padding */
+    padding: 40px 20px;       
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -708,13 +686,6 @@ body.page-location .info {
 /* About page */
 body.page-about{
   min-height:100vh;
-}
-
-body.page-about .search-box{
-  width:340px;
-  height:58px;
-  border:3px solid #12394a;
-  border-radius:12px;
 }
 
 body.page-about main{
@@ -779,13 +750,6 @@ body.page-gallery .page{
   overflow:visible;
 }
 
-body.page-gallery .search-box{
-  width:340px;
-  height:58px;
-  border:3px solid #12394a;
-  border-radius:12px;
-}
-
 body.page-gallery .gallery{
   padding:40px;
   display:grid;
@@ -830,44 +794,6 @@ body.page-gallery .gallery img{
   font-size:16px;
   margin: top 16px;
 }
-
-/* === STRONG FIX FOR BLUE SEARCH BAR === */
-.search-box {
-    background: white !important;
-    border: 3px solid #12394a !important;
-    border-radius: 12px !important;
-    overflow: hidden;
-    height: 58px;
-    width: 340px;
-    display: flex;
-    align-items: center;
-}
-
-.search-box input {
-    background: white !important;
-    color: #333 !important;
-    padding: 0 15px !important;
-    font-size: 18px !important;
-    border: none !important;
-    outline: none !important;
-    width: 100% !important;
-    height: 100% !important;
-}
-
-.search-box input:focus {
-    background: white !important;
-    outline: none !important;
-    box-shadow: none !important;
-}
-
-.search-icon {
-    padding-right: 15px;
-    font-size: 28px;
-    color: #0f6487;
-  
-}
-
-/* ================== FINAL FIX FOR FULL WIDTH TOP BAR & NAV ================== */
 body, html, .page, header, nav, .top-bar, .nav-links {
     margin: 0 !important;
     padding: 0 !important;
@@ -905,6 +831,7 @@ body.page-pricing .page {
     object-fit: cover;
     display: block;
 }
+
 /* ================== RESPONSIVE MEDIA QUERIES ================== */
 
 /* ===================== SMALL MOBILE PHONES (≤ 480px) ===================== */
