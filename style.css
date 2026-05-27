@@ -682,7 +682,10 @@ body.page-location .info {
     line-height: 1.6;
     padding: 10px;
 }
-
+.map-link {
+    text-decoration: italic;
+    color: #0f6487;
+}
 /* About page */
 body.page-about{
   min-height:100vh;
